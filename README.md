@@ -18,11 +18,11 @@ Mentor AI combines patient classroom-style lecture derivations, verified physica
 
 ## Pedagogical Pillars
 
-1. **Patient Classroom Modules**: First-principles derivations paced like a master teacher rather than superficial speedruns.
+1. **Patient Classroom Modules**: First-principles derivations paced like a patient classroom teacher rather than superficial speedruns.
 2. **Exact Blackboard Records**: Physical notebook transcription of formulas, proof structures, edge-case traps, and worked examples.
 3. **Camera-Verified Notebook Checks**: Photographic checkpoints verifying student physical working before module progression.
 4. **Contextual Socratic Doubt Solving**: Stepwise error diagnosis and targeted counter-questions without solution dumping.
-5. **Full-Working CBSE Step Marking**: Evaluation against standard board marking rubrics (+1M formula, +1.5M substitution, +0.5M units).
+5. **Full-Working CBSE Step Marking**: Question-specific evaluation of formulas, substitutions, reasoning, diagrams, units, and conclusions, with independent review before release.
 6. **Adaptive Weak-Area Practice**: Misconception-driven problem generation for systematic prerequisite remediation.
 7. **Transparent Parent Visibility**: Real evidence log with timestamped notebook submissions, diagnostic transcripts, and concept mastery curves.
 
