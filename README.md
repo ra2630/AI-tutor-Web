@@ -1,4 +1,4 @@
-# Mentor AI Study website
+# Mentor AI website
 
 Production static website for [www.mentoraistudy.com](https://www.mentoraistudy.com/), hosted through GitHub Pages.
 
