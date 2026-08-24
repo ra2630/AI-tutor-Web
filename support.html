@@ -3,41 +3,352 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Support — Mentor AI</title>
-  <meta name="description" content="Get help with Mentor AI or report a lecture, question, notebook-check, tutor, or progress issue." />
+  <title>Support &amp; Help Center — Mentor AI</title>
+  <meta name="description" content="Get help with Mentor AI courses, notebook checks, Socratic tutor diagnosis, or report an issue directly to our academic support team." />
+  <meta name="theme-color" content="#0f172a" />
   <link rel="canonical" href="https://www.mentoraistudy.com/support.html" />
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+
   <style>
-    :root { color-scheme: light; --ink:#0b1020; --muted:#697086; --brand:#6c5ce7; --bg:#f7f8fc; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:radial-gradient(circle at 85% 0, #e4e0ff, transparent 28rem),var(--bg); color:var(--ink); font:16px/1.65 system-ui,-apple-system,sans-serif; }
-    main { width:min(760px,calc(100% - 40px)); margin:0 auto; padding:64px 0; }
-    .brand { display:inline-flex; align-items:center; gap:10px; font-weight:800; color:inherit; text-decoration:none; }
-    .mark { display:grid; place-items:center; width:38px; height:38px; border-radius:12px; background:var(--brand); color:white; }
-    article { margin-top:48px; padding:clamp(24px,5vw,52px); border:1px solid #dde0eb; border-radius:28px; background:white; box-shadow:0 24px 70px rgba(25,31,68,.12); }
-    h1 { margin:0 0 14px; font-size:clamp(38px,7vw,64px); letter-spacing:-.055em; line-height:1; }
-    h2 { margin:34px 0 8px; font-size:20px; }
-    p { color:var(--muted); }
-    .button { display:inline-flex; padding:14px 18px; margin-top:14px; border-radius:13px; background:var(--brand); color:white; font-weight:750; text-decoration:none; }
-    .details { padding:16px; border-radius:14px; background:#f1f0ff; }
-    footer { margin-top:26px; color:var(--muted); font-size:14px; }
-    footer a { color:var(--brand); }
+    :root {
+      --bg: #f8fafc;
+      --bg-alt: #f1f5f9;
+      --surface: #ffffff;
+      --ink-primary: #0f172a;
+      --ink-secondary: #334155;
+      --ink-muted: #64748b;
+      --border-subtle: rgba(15, 23, 42, 0.08);
+      --border-medium: rgba(15, 23, 42, 0.16);
+      --brand-primary: #4338ca;
+      --brand-accent: #4f46e5;
+      --brand-tint: #eef2ff;
+      --brand-dark: #312e81;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 4px 14px -2px rgba(15, 23, 42, 0.07), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+      --shadow-lg: 0 12px 32px -4px rgba(15, 23, 42, 0.09);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --font-body: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-heading: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: "JetBrains Mono", monospace;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-width: 320px;
+      background-color: var(--bg);
+      color: var(--ink-secondary);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--brand-accent);
+      outline-offset: 3px;
+    }
+
+    a {
+      color: var(--brand-primary);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--brand-dark);
+    }
+
+    .container {
+      width: min(840px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      background: rgba(248, 250, 252, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+    }
+
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-heading);
+      font-size: 1.1875rem;
+      font-weight: 800;
+      color: var(--ink-primary);
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      background: var(--brand-primary);
+      color: #ffffff;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .nav-back {
+      font-family: var(--font-heading);
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--ink-secondary);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-back:hover {
+      color: var(--brand-primary);
+    }
+
+    main {
+      padding-block: clamp(48px, 6vw, 84px);
+    }
+
+    .support-card {
+      background: var(--surface);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-xl);
+      padding: clamp(28px, 5vw, 56px);
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 36px;
+    }
+
+    .page-kicker {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--brand-primary);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+      color: var(--ink-primary);
+      margin-bottom: 16px;
+    }
+
+    .lead {
+      font-size: 1.125rem;
+      color: var(--ink-muted);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .action-box {
+      background: var(--brand-tint);
+      border: 1px solid rgba(67, 56, 202, 0.2);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .action-box h2 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 24px;
+      font-family: var(--font-heading);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      border-radius: var(--radius-md);
+      transition: all 0.18s ease;
+      text-decoration: none;
+      min-height: 48px;
+      width: fit-content;
+    }
+
+    .btn-primary {
+      background-color: var(--brand-primary);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(67, 56, 202, 0.28);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--brand-dark);
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .help-section {
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 1.375rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--ink-primary);
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--ink-secondary);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .details-box {
+      background: var(--bg-alt);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      margin-block: 14px 20px;
+      font-size: 0.9375rem;
+      color: var(--ink-primary);
+      line-height: 1.5;
+    }
+
+    .site-footer {
+      text-align: center;
+      padding-bottom: 48px;
+      font-size: 0.875rem;
+      color: var(--ink-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 12px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-link" aria-label="Mentor AI home">
+          <span class="brand-mark" aria-hidden="true">M</span>
+          <span>Mentor AI</span>
+        </a>
+        <a href="index.html" class="nav-back">← Back to Home</a>
+      </div>
+    </div>
+  </header>
+
   <main>
-    <a class="brand" href="index.html"><span class="mark">M</span> Mentor AI</a>
-    <article>
-      <h1>How can we help?</h1>
-      <p>For the fastest diagnosis, use <strong>Report a problem</strong> inside the app. It prepares an email with the exact course, lecture, page, question, app version, and learning state where the issue occurred. You review everything before sending.</p>
-      <a class="button" href="mailto:support@mentoraistudy.com?subject=Mentor%20AI%20Support">Email support</a>
+    <div class="container">
+      
+      <article class="support-card">
+        <span class="page-kicker">Support Center</span>
+        <h1>How can our academic &amp; technical team assist you?</h1>
+        <p class="lead">
+          We provide direct support for course queries, curriculum scope, notebook camera checks, and student onboarding.
+        </p>
 
-      <h2>Useful details to include</h2>
-      <div class="details">What you expected · what happened · the course and lecture · whether the issue repeats · the approximate time it occurred</div>
+        <div class="action-box">
+          <h2>Direct Email Support</h2>
+          <p>
+            Email us directly for prompt assistance. Our academic team reviews every inquiry regarding lecture derivations, question diagnostics, or app access.
+          </p>
+          <a class="btn btn-primary" href="mailto:support@mentoraistudy.com?subject=Mentor%20AI%20Support%20Request">
+            Email support@mentoraistudy.com →
+          </a>
+        </div>
 
-      <h2>Privacy</h2>
-      <p>The in-app report never attaches notebook images, personal details, or answer keys automatically. Do not send passwords or payment information by email.</p>
-    </article>
-    <footer><a href="index.html">Home</a> · <a href="privacy.html">Privacy</a> · support@mentoraistudy.com</footer>
+        <section class="help-section">
+          <h2>In-App Problem Reporting</h2>
+          <p>
+            For the fastest resolution of a specific problem or lecture step, use the <strong>Report a problem</strong> option inside the Mentor AI app.
+          </p>
+          <p>
+            It prepares an addressed email draft populated with the exact course identifier, lecture title, question number, and app version so we can inspect the exact learning state immediately. You can review the full text of the draft before sending.
+          </p>
+        </section>
+
+        <section class="help-section">
+          <h2>Useful Details to Include in Manual Reports</h2>
+          <p>If contacting us directly by email, the following details help us diagnose the issue quickly:</p>
+          <div class="details-box">
+            • The specific course and lecture title (e.g., <em>Quadratic Equations · Lecture 04</em>)<br />
+            • The question number or practice module<br />
+            • Your device model and operating system version (iOS or Android)<br />
+            • What you expected to occur vs. what happened
+          </div>
+        </section>
+
+        <section class="help-section">
+          <h2>Privacy &amp; Security Note</h2>
+          <p>
+            Our in-app diagnostic reports never attach notebook photographs, passwords, or personal identity details automatically. Please do not send passwords or payment information via email.
+          </p>
+        </section>
+
+        <section class="help-section">
+          <h2>Course Release Inquiries</h2>
+          <p>
+            For questions about the release roadmap for JEE Physics, JEE Chemistry, CBSE Classes XI &amp; XII, or planned standardized exams (NEET, SAT, GRE, GMAT), please write to <a href="mailto:info@mentoraistudy.com">info@mentoraistudy.com</a>.
+          </p>
+        </section>
+      </article>
+
+      <footer class="site-footer">
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <span>·</span>
+          <a href="privacy.html">Privacy Policy</a>
+          <span>·</span>
+          <a href="mailto:support@mentoraistudy.com">support@mentoraistudy.com</a>
+        </div>
+        <p>&copy; 2026 Mentor AI Study. All rights reserved.</p>
+      </footer>
+
+    </div>
   </main>
+
 </body>
 </html>

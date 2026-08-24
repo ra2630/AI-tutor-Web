@@ -3,42 +3,311 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy — Mentor AI</title>
-  <meta name="description" content="Mentor AI privacy information for students and parents." />
+  <title>Privacy Policy — Mentor AI</title>
+  <meta name="description" content="Privacy principles and learning data handling practices for Mentor AI students, parents, and educators." />
+  <meta name="theme-color" content="#0f172a" />
   <link rel="canonical" href="https://www.mentoraistudy.com/privacy.html" />
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+
   <style>
-    :root { color-scheme:light; --ink:#0b1020; --muted:#697086; --brand:#6c5ce7; --bg:#f7f8fc; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.7 system-ui,-apple-system,sans-serif; }
-    main { width:min(760px,calc(100% - 40px)); margin:0 auto; padding:64px 0; }
-    .brand { color:inherit; text-decoration:none; font-weight:800; }
-    article { margin-top:38px; padding:clamp(24px,5vw,48px); border:1px solid #dde0eb; border-radius:26px; background:white; }
-    h1 { margin:0; font-size:clamp(38px,7vw,58px); letter-spacing:-.05em; line-height:1.05; }
-    h2 { margin:32px 0 6px; font-size:20px; }
-    p,li { color:var(--muted); }
-    a { color:var(--brand); }
+    :root {
+      --bg: #f8fafc;
+      --bg-alt: #f1f5f9;
+      --surface: #ffffff;
+      --ink-primary: #0f172a;
+      --ink-secondary: #334155;
+      --ink-muted: #64748b;
+      --border-subtle: rgba(15, 23, 42, 0.08);
+      --border-medium: rgba(15, 23, 42, 0.16);
+      --brand-primary: #4338ca;
+      --brand-accent: #4f46e5;
+      --brand-tint: #eef2ff;
+      --brand-dark: #312e81;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 4px 14px -2px rgba(15, 23, 42, 0.07), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+      --shadow-lg: 0 12px 32px -4px rgba(15, 23, 42, 0.09);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --font-body: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-heading: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: "JetBrains Mono", monospace;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-width: 320px;
+      background-color: var(--bg);
+      color: var(--ink-secondary);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--brand-accent);
+      outline-offset: 3px;
+    }
+
+    a {
+      color: var(--brand-primary);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--brand-dark);
+    }
+
+    .container {
+      width: min(840px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      background: rgba(248, 250, 252, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+    }
+
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-heading);
+      font-size: 1.1875rem;
+      font-weight: 800;
+      color: var(--ink-primary);
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      background: var(--brand-primary);
+      color: #ffffff;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .nav-back {
+      font-family: var(--font-heading);
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--ink-secondary);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-back:hover {
+      color: var(--brand-primary);
+    }
+
+    main {
+      padding-block: clamp(48px, 6vw, 84px);
+    }
+
+    .policy-card {
+      background: var(--surface);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-xl);
+      padding: clamp(28px, 5vw, 56px);
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 36px;
+    }
+
+    .page-kicker {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--brand-primary);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+      color: var(--ink-primary);
+      margin-bottom: 8px;
+    }
+
+    .timestamp {
+      font-size: 0.875rem;
+      color: var(--ink-muted);
+      margin-bottom: 28px;
+    }
+
+    .policy-intro {
+      font-size: 1.0625rem;
+      color: var(--ink-secondary);
+      line-height: 1.65;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--ink-primary);
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--ink-secondary);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-bottom: 16px;
+      padding-left: 20px;
+      color: var(--ink-secondary);
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .site-footer {
+      text-align: center;
+      padding-bottom: 48px;
+      font-size: 0.875rem;
+      color: var(--ink-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 12px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-link" aria-label="Mentor AI home">
+          <span class="brand-mark" aria-hidden="true">M</span>
+          <span>Mentor AI</span>
+        </a>
+        <a href="index.html" class="nav-back">← Back to Home</a>
+      </div>
+    </div>
+  </header>
+
   <main>
-    <a class="brand" href="index.html">← Mentor AI</a>
-    <article>
-      <h1>Privacy</h1>
-      <p>Last updated: 24 August 2026</p>
-      <p>Mentor AI is being developed for students and families. This page describes the current product principles and will be expanded before public release with the complete legal policy for every enabled service.</p>
+    <div class="container">
+      
+      <article class="policy-card">
+        <span class="page-kicker">Data Policy</span>
+        <h1>Privacy Principles &amp; Student Learning Records</h1>
+        <div class="timestamp">Last Updated: August 2026</div>
 
-      <h2>Learning evidence</h2>
-      <p>The app may store course progress, question attempts, tutor conversations, and notebook or solution images needed to provide learning feedback and a parent-visible learning record.</p>
+        <p class="policy-intro">
+          Mentor AI is built for students, parents, and educators preparing for demanding examinations. This document outlines how we collect, store, and utilize learning data strictly for academic feedback, diagnostic progress evaluation, and platform reliability.
+        </p>
 
-      <h2>Support reports</h2>
-      <p>The in-app reporting tool includes technical context such as app version and stable course identifiers. It does not attach notebook photos, personal details, or answer keys automatically. The sender can review the email before sending.</p>
+        <h2>1. Learning Evidence &amp; Notebook Submissions</h2>
+        <p>
+          To ensure genuine comprehension and physical study discipline, the platform processes student work records:
+        </p>
+        <ul>
+          <li><strong>Notebook Check Photographs:</strong> Images of handwritten lecture notes and step-by-step rough work submitted to verify completion of blackboard tasks.</li>
+          <li><strong>Diagnostic Interactions:</strong> Student error submissions, intermediate calculation steps, and Socratic guidance dialogue logs.</li>
+          <li><strong>Course Progression:</strong> Module completions, timestamped session durations, and adaptive practice topic mastery indicators.</li>
+        </ul>
+        <p>
+          This data is used solely to generate targeted pedagogical feedback, power adaptive revision queues, and populate the verifiable Parent Learning Record.
+        </p>
 
-      <h2>Content protection</h2>
-      <p>The app uses a secure display layer intended to obscure course material in screenshots, screen recordings, mirroring, and app-switcher previews.</p>
+        <h2>2. Parent Progress Visibility</h2>
+        <p>
+          Mentor AI provides parents with transparent visibility into genuine study activity. Parents can review verified notebook check submissions, diagnostic interaction summaries, and concept mastery curves to monitor learning progress without relying on opaque synthetic scores.
+        </p>
 
-      <h2>Contact</h2>
-      <p>Questions can be sent to <a href="mailto:support@mentoraistudy.com">support@mentoraistudy.com</a>.</p>
-    </article>
+        <h2>3. In-App Diagnostics &amp; Problem Reporting</h2>
+        <p>
+          When a student or parent utilizes the in-app <em>Report a problem</em> tool, the application prepares an addressed support draft containing diagnostic metadata:
+        </p>
+        <ul>
+          <li>Course identifier and lecture title</li>
+          <li>Specific question or checkpoint identifier</li>
+          <li>Application build number and client OS version (iOS / Android)</li>
+        </ul>
+        <p>
+          This diagnostic context helps our team resolve curriculum or software issues. The system does not automatically attach personal photos, passwords, or unrelated device data.
+        </p>
+
+        <h2>4. Content Protection &amp; Display Security</h2>
+        <p>
+          To protect proprietary pedagogical materials, curriculum derivations, and examination question items, Mentor AI employs display protections designed to prevent unauthorized automated extraction, screen capture, and third-party recording.
+        </p>
+
+        <h2>5. No Advertising &amp; No Data Brokering</h2>
+        <p>
+          We do not sell student data, track students across external applications, or display third-party advertisements. Academic data is treated strictly as confidential educational records.
+        </p>
+
+        <h2>6. Contact &amp; Inquiries</h2>
+        <p>
+          For any questions regarding student data, learning records, or account deletion requests, please contact our support team at <a href="mailto:support@mentoraistudy.com">support@mentoraistudy.com</a>.
+        </p>
+      </article>
+
+      <footer class="site-footer">
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <span>·</span>
+          <a href="support.html">Support Center</a>
+          <span>·</span>
+          <a href="mailto:support@mentoraistudy.com">support@mentoraistudy.com</a>
+        </div>
+        <p>&copy; 2026 Mentor AI Study. All rights reserved.</p>
+      </footer>
+
+    </div>
   </main>
+
 </body>
 </html>
