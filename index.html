@@ -227,6 +227,7 @@ button {
 
 .button-secondary {
   padding: 15px 22px;
+  color: var(--ink);
   background: white;
   border-color: var(--line);
 }
@@ -379,6 +380,25 @@ button {
   height: 8px;
   border-radius: 50%;
   background: #d8daE4;
+}
+
+.window-course {
+  display: grid;
+  gap: 2px;
+  text-align: center;
+}
+
+.window-course strong {
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.window-course span {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .online-status {
@@ -544,6 +564,33 @@ button {
   border: 1px solid var(--line);
   border-radius: 15px;
   font-size: 12px;
+}
+
+.app-tab-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  padding: 10px 16px 14px;
+  border-top: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.app-tab {
+  display: grid;
+  justify-items: center;
+  gap: 3px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.app-tab b {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.app-tab.active {
+  color: var(--primary);
 }
 
 .chat-input button {
@@ -985,6 +1032,20 @@ button {
   color: #b4b8c8;
 }
 
+.cta-section .button-secondary {
+  color: var(--dark);
+  border-color: rgba(255, 255, 255, 0.78);
+  background: white;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+}
+
+.cta-section .button-secondary:hover,
+.cta-section .button-secondary:focus-visible {
+  color: var(--primary-dark);
+  border-color: white;
+  background: #f4f2ff;
+}
+
 .waitlist-form > div {
   padding: 6px;
   display: flex;
@@ -1364,6 +1425,10 @@ button {
             <div class="window-controls">
               <span></span><span></span><span></span>
             </div>
+            <div class="window-course">
+              <strong>Quadratic Equations</strong>
+              <span>Location of roots · guided retry</span>
+            </div>
             <div class="online-status">
               <span></span>
               Tutor online
@@ -1420,6 +1485,12 @@ button {
           <div class="chat-input">
             <span>Ask a follow-up question...</span>
             <button type="button" aria-label="Send message">↑</button>
+          </div>
+
+          <div class="app-tab-bar" aria-label="Mentor AI app navigation preview">
+            <span class="app-tab active"><b>▣</b>Learn</span>
+            <span class="app-tab"><b>◉</b>Ask Tutor</span>
+            <span class="app-tab"><b>▥</b>Progress</span>
           </div>
         </div>
 
