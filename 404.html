@@ -26,11 +26,7 @@
   <script>
     (function () {
       var path = location.pathname || '';
-      var joinPrefix = '/cardbaazi/j/';
-      var isJoinAlias = path === '/cardbaazi/join' || path === '/cardbaazi/join/';
-      var isShortJoin = path === '/cardbaazi/j' || path === '/cardbaazi/j/' || path.indexOf(joinPrefix) === 0;
-
-      if (!isJoinAlias && !isShortJoin) return;
+      if (path.indexOf('/cardbaazi/j/') !== 0) return;
 
       function readParam(name) {
         var value = new URLSearchParams(location.search).get(name);
@@ -47,10 +43,12 @@
         catch (e) { return String(raw).trim().slice(0, 128); }
       }
 
-      var code = readParam('code') || codeFromPath();
+      var pathCode = codeFromPath();
+      if (!pathCode) return;
+
+      var code = readParam('code') || pathCode;
       var game = readParam('game');
-      var dest = '/cardbaazi/join.html?code=' + encodeURIComponent(code) + '&game=' + encodeURIComponent(game);
-      location.replace(dest);
+      location.replace('/cardbaazi/join.html?code=' + encodeURIComponent(code) + '&game=' + encodeURIComponent(game));
     })();
   </script>
 </head>
