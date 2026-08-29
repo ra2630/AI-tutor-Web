@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page not found — Mentor AI</title>
+  <meta name="description" content="This Mentor AI page could not be found." />
+  <meta name="theme-color" content="#0b1020" />
+  <style>
+    :root { color-scheme: light; --ink: #0b1020; --muted: #697086; --brand: #6c5ce7; --bg: #f7f8fc; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at 15% 0%, rgba(108, 92, 231, 0.08), transparent 28rem), var(--bg);
+      color: var(--ink);
+      font: 16px/1.7 system-ui, -apple-system, sans-serif;
+    }
+    main { width: min(760px, calc(100% - 40px)); margin: 0 auto; padding: 64px 0; }
+    .brand { color: inherit; text-decoration: none; font-weight: 800; }
+    article { margin-top: 38px; padding: clamp(24px, 5vw, 48px); border: 1px solid #dde0eb; border-radius: 26px; background: white; }
+    h1 { margin: 0 0 12px; font-size: clamp(38px, 7vw, 58px); letter-spacing: -.05em; line-height: 1.05; }
+    p { color: var(--muted); }
+    a { color: var(--brand); }
+  </style>
+  <script>
+    (function () {
+      var path = location.pathname || '';
+      var joinPrefix = '/cardbaazi/j/';
+      var isJoinAlias = path === '/cardbaazi/join' || path === '/cardbaazi/join/';
+      var isShortJoin = path === '/cardbaazi/j' || path === '/cardbaazi/j/' || path.indexOf(joinPrefix) === 0;
+
+      if (!isJoinAlias && !isShortJoin) return;
+
+      function readParam(name) {
+        var value = new URLSearchParams(location.search).get(name);
+        if (value == null) return '';
+        return String(value).trim().slice(0, 128);
+      }
+
+      function codeFromPath() {
+        var segs = location.pathname.split('/').filter(Boolean);
+        var i = segs.lastIndexOf('j');
+        var raw = (i === -1) ? '' : (segs[i + 1] || '');
+        if (!raw || raw === 'index.html' || /\.html?$/i.test(raw)) return '';
+        try { return decodeURIComponent(raw).trim().slice(0, 128); }
+        catch (e) { return String(raw).trim().slice(0, 128); }
+      }
+
+      var code = readParam('code') || codeFromPath();
+      var game = readParam('game');
+      var dest = '/cardbaazi/join.html?code=' + encodeURIComponent(code) + '&game=' + encodeURIComponent(game);
+      location.replace(dest);
+    })();
+  </script>
+</head>
+<body>
+  <main>
+    <a class="brand" href="/">← Mentor AI</a>
+    <article>
+      <h1>Page not found</h1>
+      <p>This Mentor AI page does not exist or has moved.</p>
+      <p><a href="/">Return home</a></p>
+    </article>
+  </main>
+</body>
+</html>
